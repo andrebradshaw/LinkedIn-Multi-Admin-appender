@@ -39,7 +39,7 @@ function autocomplete(optionsArr, colorArr) {
   textbox_1.style.fontFamily = 'monospace';
 
   function createDivsFromArray(arr) {
-    var heightCont = (arr.length * 10);
+    var heightCont = (arr.length * 15);
     var autoCompl = document.createElement('div');
     autoCompl.setAttribute('id', 'autoCompl');
     document.getElementById('pop_container').appendChild(autoCompl);
