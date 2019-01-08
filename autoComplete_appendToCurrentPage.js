@@ -2,7 +2,7 @@ var options = [{
 	'name': 'company_name_goes_here_1',
 	'id': 'your_company_id_goes_here_123'
 }, {
-	'name': 'company_name_goes_here_2',
+	'name': 'company_name_2',
 	'id': 'your_company_id_goes_here_456'
 }];
 
@@ -114,8 +114,8 @@ function autocomplete(optionsArr, colorArr) {
 function appendCoId(){
 	for(i=0; i<options.length; i++){
 		var tval = document.getElementById('textbox_code').value;
-		if(tval == options[i].name){
-			var output = window.location.href + '/?actorCompanyId=' + options[i].id;
+		if(new RegExp(tval).test(options[i].name) === true){
+			var output = window.location.href.replace(/\/\?actorCompanyId=.+/, '') + '/?actorCompanyId=' + options[i].id;
 			window.open(output, '_self');
 		}
 	}
