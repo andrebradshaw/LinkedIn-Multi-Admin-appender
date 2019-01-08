@@ -114,7 +114,7 @@ function autocomplete(optionsArr, colorArr) {
 function appendCoId(){
 	for(i=0; i<options.length; i++){
 		var tval = document.getElementById('textbox_code').value;
-		if(tval = options[i].name){
+		if(tval == options[i].name){
 			var output = window.location.href + '/?actorCompanyId=' + options[i].id;
 			window.open(output, '_self');
 		}
